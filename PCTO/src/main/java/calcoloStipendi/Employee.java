@@ -13,6 +13,7 @@ public class Employee {
         this.hourlyWage = hourlyWage;
         this.role = role;
         this.reportsTo = reportsTo;
+        "s"
     }
 
     public Employee(String name, String surname, double hourlyWage, String role) {
