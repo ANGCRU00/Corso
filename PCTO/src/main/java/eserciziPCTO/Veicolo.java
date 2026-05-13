@@ -1,29 +1,45 @@
 package eserciziPCTO;
 
-public class Veicolo {
-    private String marca;
-    private int anno;
-    private int cilindrata;
+class Veicolo {
+	String targa;
+	String marca;
 
-    public Veicolo(String marca, int anno, int cilindrata) {
-        this.marca = marca;
-        this.anno = anno;
-        this.cilindrata = cilindrata;
-    }
+	public Veicolo(String targa, String marca) {
+		this.targa = targa;
+		this.marca = marca;
+	}
+}
 
-    public String getMarca() {
-        return marca;
-    }
+class Auto extends Veicolo {
+	String motorizzazione;
+	int cilindrata;
 
-    public int getAnno() {
-        return anno;
-    }
+	public Auto(String targa, String marca, String motorizzazione, int cilindrata) {
+		super(targa, marca);
+		this.motorizzazione = motorizzazione;
+		this.cilindrata = cilindrata;
+	}
+}
 
-    public int getCilindrata() {
-        return cilindrata;
-    }
+class Moto extends Veicolo {
+	int tempi;
 
-    public void stampaDettagli() {
-        System.out.println("Marca: " + marca + ", Anno: " + anno + ", Cilindrata: " + cilindrata);
-    }
+	public Moto(String targa, String marca, int tempi) {
+		super(targa, marca);
+		this.tempi = tempi;
+	}
+}
+
+class Intervento {
+	int nOrdine;
+	String targaVeicolo;
+	String tipologia;
+	double costo;
+
+	public Intervento(int nOrdine, String targaVeicolo, String tipologia, double costo) {
+		this.nOrdine = nOrdine;
+		this.targaVeicolo = targaVeicolo;
+		this.tipologia = tipologia;
+		this.costo = costo;
+	}
 }
